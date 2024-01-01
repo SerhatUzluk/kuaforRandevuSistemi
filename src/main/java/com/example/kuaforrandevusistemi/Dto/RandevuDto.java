@@ -2,10 +2,8 @@ package com.example.kuaforrandevusistemi.Dto;
 
 import com.example.kuaforrandevusistemi.Entity.Kuafor;
 import com.example.kuaforrandevusistemi.Entity.Musteri;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,12 +23,14 @@ public class RandevuDto {
     private String tanim;
     private LocalDateTime randevuTarihi;
 
-    @ManyToOne
-    @JoinColumn(name = "id")
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "kuaforId", referencedColumnName = "id")
     private Kuafor kuafor;
 
-    @ManyToOne
-    @JoinColumn(name = "id")
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "musteriId", referencedColumnName = "id")
     private Musteri musteri;
 
 }

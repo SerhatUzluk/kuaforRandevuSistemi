@@ -1,7 +1,10 @@
 package com.example.kuaforrandevusistemi.Dto;
 
 import com.example.kuaforrandevusistemi.Entity.Kuafor;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,8 +35,8 @@ public class ShiftTablosuDto {
     private LocalDateTime pzrBaslangic;
     private LocalDateTime pzrBitis;
 
-
-    @OneToOne
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "kuaforId", referencedColumnName = "id")
     private Kuafor kuafor;
 
