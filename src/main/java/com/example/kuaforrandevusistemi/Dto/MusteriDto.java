@@ -1,6 +1,9 @@
 package com.example.kuaforrandevusistemi.Dto;
 
 import com.example.kuaforrandevusistemi.Entity.Randevu;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +24,8 @@ public class MusteriDto {
     private String mailAdres;
     private String telefonNo;
 
-
+    @JsonManagedReference
     @OneToMany(mappedBy = "musteri")
+    @JsonIgnore
     private List<Randevu> randevular;
 }

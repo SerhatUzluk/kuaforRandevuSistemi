@@ -3,6 +3,9 @@ package com.example.kuaforrandevusistemi.Dto;
 import com.example.kuaforrandevusistemi.Entity.Kuafor;
 import com.example.kuaforrandevusistemi.Entity.Musteri;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,21 +19,21 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class RandevuDto {
     private Long id;
     private String islemTuru;
     private String tanim;
     private LocalDateTime randevuTarihi;
 
-    @JsonBackReference
+    @JsonBackReference("kuaforReference")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "kuaforId", referencedColumnName = "id")
     private Kuafor kuafor;
 
-    @JsonBackReference
+    @JsonBackReference("musteriReference")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "musteriId", referencedColumnName = "id")
     private Musteri musteri;
 
+    //ManyToMany ilişki olarak değiştirilecek.
 }
