@@ -1,6 +1,7 @@
 
     const btnOn=document.querySelector(".btnOn");
     function onayla(){
+        alert("çalıştı")
     var tarih=document.getElementById("tarihsaatdakika").value;
     var kuafor=document.getElementById("kuafor").value;
 }
@@ -67,8 +68,8 @@
 
     function MusteriGirisi(){
         const data = {
-            "mailAdres":document.getElementById('exampleInputEmail1').value,
-            "sifre":document.getElementById('exampleInputPassword1').value
+            mailAdres:"ozan@gmail.com",
+            sifre:"ozan1"
         }
 
         var json1 = JSON.stringify(data);
@@ -78,15 +79,16 @@
         xhr1.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
         xhr1.onload = function (){
-            if (xhr1.status === 201 && xhr1.readyState ===4){
+            if (xhr1.status === 200 && xhr1.readyState ===4){
                 var post = xhr1.responseText;
                 console.log(post);
-                alert('Kayıt başarılı.')
-                window.location.href = 'http://localhost:8080/';
+                alert('Giriş başarılı.')
+                window.location.href = 'http://localhost:8080/MusteriEkrani.html';
 
             }else{
                 alert('Bu e-posta kullanılmamaktadır.')
+                alert(json1)
             }
         }
-        xhr.send(json);
+        xhr1.send(json1);
     }
