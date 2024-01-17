@@ -8,5 +8,6 @@ import java.util.List;
 public interface MusteriService {
     MusteriDto musteriYarat(MusteriDto musteriDto);
     MusteriDto idIleGetir(Long musteriId);
+    boolean musteriVarmi(String mailAdres, String sifre);
 
 }

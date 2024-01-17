@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+header{
+    background-image: url(Images/pexels-thgusstavo-santana-2775269.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+}
+header::before{
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -5;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #373737;
+    opacity: 0.6;
+    position: sticky;
+    top:0px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin:1rem;
+    margin-bottom: 20px;
+}
+header .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    margin-right: 15px ;
+    cursor:auto;
+}
+header .logo h1{
+    font-size: 3rem;
+    text-shadow:2px 1px 5px #373737 , 1px -2px 3px goldenrod;
+}
+header .logo h1 span{
+    font-size:larger;
+    color: antiquewhite;
+    font-style: oblique;
+    font-weight:bold;
+}
+header .navbar{
+    display: block;
+}
+header .navbar .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+header .navbar .navigation li{
+    margin: 15px;
+
+}
+header .navbar .navigation li a{
+    color: #fff;
+    font-size: 20px;
+    transition-property:all;
+    transition-duration: 0.4s;
+}
+header .navbar .navigation li a:hover{
+    color: goldenrod;
+    border-bottom: 2px solid goldenrod;
+    transform: translateX(20px);
+}
+header .navbar .navigation li .kayıt-btn{
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color:#fff;
+    background-color: blue;
+    transition: all .6s ease;
+}
+header .navbar .navigation li .kayıt-btn:hover{
+    color:#EEF5FF;
+    background-color: blue;
+    opacity: 0.7;
+}
+header .navbar .navigation li svg{
+    font-size: 24px;
+    visibility: hidden;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 100%;
+}
+section .içerik{
+    margin-bottom: 10px;
+    position: relative;
+}
+section .içerik-2{
+    margin-bottom: 10px;
+    position: relative;
+    height:70vh;
+}
+section .içerik h3{
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 3px;
+    width: 100%;
+}
+section .içerik h3 span{
+    color: goldenrod;
+    text-transform: uppercase;
+    font-style: oblique;
+}
+section .içerik h5{
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    align-items:flex-end;
+    color: #373737;
+}
+section .içerik .btn{
+    position: absolute;
+    top: 90%;
+    left: 42%;
+    margin-top: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #373737;
+    border-radius: 25px;
+    transition: 0.6s;
+}
+section .içerik .btn:hover{
+    color: goldenrod;
+    background-color: black;
+    cursor: pointer;
+}
+
+/*kategori - açıklama*/
+.kategori-açıklama{
+    background-color:#EEF5FF ;
+    display: block;
+    width: 100%;
+}
+.kategori{
+    padding: 100px;
+    width: auto;
+}
+.kategori .row .col .img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:35vw;
+    height:40vh;
+    border-radius: 25px;
+}
+.kategori h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.kategori .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kategori .row .col{
+    width: 50%;
+}
+.kategori .row .col h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.kategori .row .col p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.main-gallery{
+    background-color: #F6F4EB;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1100px;
+    margin: auto ;
+    padding-top: 15px;
+}
+.gallery img{
+    margin: 10px 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    transition:all 0.5s;
+}
+.gallery img:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+/*footer*/
+footer{
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 30px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: aqua;
+}
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

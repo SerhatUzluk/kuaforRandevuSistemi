@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Kuaför Randevu Oluştur , saç kesim ,fön</title>
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Kuaför Online">
+            <h1>Salon <span>10</span>line</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="#Hizmetler">Hizmetler</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><button class="kayıt-btn" id="sigIn" onclick="giris()"><i class="fa-regular fa-user"></i> Giriş Yap</button></li>
+                <li><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section>
+    <div class="içerik">
+        <h3 class="başlık">Saçlar Bizim İçin Sanattır...</h3><br>
+        <h3 class="başlık"><span>Harika</span> Görünümün Adresi</h3>
+    </div>
+    <div class="içerik">
+        <h5>İlk denemeniz için randevu oluşturun</h5>
+        <button class="btn" onclick="giris()">Randevu Oluştur</button>
+    </div>
+</section>
+
+<div class="kategori-açıklama">
+    <div class="kategori">
+        <h2>İyi göründüklerinde, iyi görünürsün.</h2>
+        <div class="row">
+            <div class="col"><img src="Images/arkakapak.jpg" alt="" class="img"></div>
+            <div class="col">
+                <h3>Bir daha sıra beklemeyin.</h3>
+                <p>Artık devir değişti! Çok sevdiğiniz mahalle berberiniz yoğun olabilir ve telefonlarınıza dönemeyebilir. Üzülmeyin, berberiniz sizi hala çok seviyor. Muhtemelen çağa ayak uydurup randevuları eski usulden online platforma taşımıştır. Sistemimizden kayıtlı berberinizin uygun randevu saatlerini ve dilediğiniz hizmeti seçebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="kategori" id="Hizmetler">
+        <h2>Salon 10Line ile Herzaman Online</h2>
+        <div class="row">
+            <div class="col"><p>Mahallenin çok sevilen berber abisisiniz ve çok sayıda randevuyu planlamak zorlaştı mı? Belki mahallenize yeni taşınan ve hizmetinizden haberi olmayan komşularınız da vardır. Berber dükkanınızı daha görünür yapmak, hizmetlerinizi ve fiyat bilgilendirmesini kolaylıkla anlatmak verandevu oluşturmak bizimle çok kolay!</p></div>
+            <div class="col">
+                <img src="Images/küçükkapak.jpg" alt="" class="img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- galeri bölümü -->
+
+<div class="main-gallery">
+    <div class="gallery">
+        <img src="Images/resim-1.jpg" alt="">
+        <img src="Images/resim-2.jpg" alt="">
+        <img src="Images/resim-3.jpg" alt="">
+        <img src="Images/pexels-thgusstavo-santana-2775269.jpg" alt="">
+        <img src="Images/resim-5.jpg" alt="">
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h3>Salon 10Line</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos odit temporibus quam voluptate quasi.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2024 Tüm Hakları Saklıdır.</p>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

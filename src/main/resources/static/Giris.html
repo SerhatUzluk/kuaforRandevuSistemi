@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px ;
+            box-sizing: border-box;
+        }
+        body{
+            background: url(Images/resim-2.jpg);
+            background-position: center;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+            height: 100vh;
+        }
+        .giriş{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        .giriş .col{
+            background-color:rgba(0, 0, 0.1, 0.6);
+            padding: 9rem 9rem;
+            border-radius: 25px;
+        }
+        form{
+            color: #fff;
+        }
+        #registration-form{
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="giriş">
+    <div class="col">
+        <form id="login-form">
+            <div class="mb-3">
+                <label for="loginEmail" class="form-label">E-mail Adres</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="loginPassword">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button" onclick="MusteriGirisi()">Giriş Yap</button>
+                <p>Hesabınızmı yok mu? <a href="KayitOl.html">buradan kaydolun?</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="musteri.js"></script>
+</body>
+</html>

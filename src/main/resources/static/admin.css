@@ -1,0 +1,18 @@
+.form__title{
+    font-weight: 300;
+    margin: 0px;
+    margin-bottom: 1.25rem;
+}
+.link{
+    color: rgb(184, 182, 176);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+.container{
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25) ;
+    height: 750px;
+    width: 750px;
+}

@@ -17,14 +17,16 @@ public class Musteri {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String ad;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String soyad;
     @Column(nullable = false, unique = true)
     private String mailAdres;
     @Column(nullable = false, unique = true)
     private String telefonNo;
+    @Column(nullable = false)
+    private String sifre;
 
     @OneToMany(mappedBy = "musteri")
     private List<Randevu> randevular;

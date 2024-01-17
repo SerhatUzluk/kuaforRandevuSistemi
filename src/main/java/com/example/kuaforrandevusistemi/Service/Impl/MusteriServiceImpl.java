@@ -10,11 +10,13 @@ import com.example.kuaforrandevusistemi.Repository.MusteriRepository;
 import com.example.kuaforrandevusistemi.Service.MusteriService;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class MusteriServiceImpl implements MusteriService {
     public MusteriRepository musteriRepository;
 
-    public MusteriServiceImpl(MusteriRepository musteriRepository){
+    public MusteriServiceImpl(MusteriRepository musteriRepository) {
         this.musteriRepository = musteriRepository;
     }
 
@@ -27,7 +29,18 @@ public class MusteriServiceImpl implements MusteriService {
 
     @Override
     public MusteriDto idIleGetir(Long musteriId) {
-        Musteri musteri = musteriRepository.findById(musteriId).orElseThrow(()->new KaynakBulunamadiException("Bu id'ye sahip bir musteri bulunmuyor. Id: " + musteriId));
+        Musteri musteri = musteriRepository.findById(musteriId).orElseThrow(() -> new KaynakBulunamadiException("Bu id'ye sahip bir musteri bulunmuyor. Id: " + musteriId));
         return MusteriMapper.mapToMusteriDto(musteri);
     }
+
+    @Override
+    public boolean musteriVarmi(String mailAdres, String sifre) {
+        Optional<Musteri> musteriOptional = musteriRepository.findByMailAdresAndSifre(mailAdres, sifre);
+        return musteriOptional.isPresent();
+    }
+    /*public boolean kullaniciVarMi(String email, String sifre) {
+        Optional<Musteri> musteriOptional = musteriRepository.findByEmailAndSifre(email, sifre);
+        return musteriOptional.isPresent();
+    }*/
 }
+

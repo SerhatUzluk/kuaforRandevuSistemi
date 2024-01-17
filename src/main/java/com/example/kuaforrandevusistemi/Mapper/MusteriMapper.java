@@ -12,6 +12,7 @@ public class MusteriMapper {
                 musteri.getSoyad(),
                 musteri.getMailAdres(),
                 musteri.getTelefonNo(),
+                musteri.getSifre(),
                 musteri.getRandevular()
         );
     }
@@ -23,6 +24,7 @@ public class MusteriMapper {
                 musteriDto.getSoyad(),
                 musteriDto.getMailAdres(),
                 musteriDto.getTelefonNo(),
+                musteriDto.getSifre(),
                 musteriDto.getRandevular()
         );
     }
