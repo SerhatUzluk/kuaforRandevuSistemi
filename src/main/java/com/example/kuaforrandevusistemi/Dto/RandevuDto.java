@@ -35,5 +35,4 @@ public class RandevuDto {
     @JoinColumn(name = "musteriId", referencedColumnName = "id")
     private Musteri musteri;
 
-    //ManyToMany ilişki olarak değiştirilecek.
 }

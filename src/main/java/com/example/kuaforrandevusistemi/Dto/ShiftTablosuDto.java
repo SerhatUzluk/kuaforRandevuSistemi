@@ -35,7 +35,7 @@ public class ShiftTablosuDto {
     private LocalDateTime pzrBaslangic;
     private LocalDateTime pzrBitis;
 
-    @JsonBackReference
+    @JsonBackReference("kuaforId")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "kuaforId", referencedColumnName = "id")
     private Kuafor kuafor;

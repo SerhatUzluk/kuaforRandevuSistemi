@@ -26,12 +26,11 @@ public class KuaforDto {
     private String ad;
     private String soyad;
 
-    @JsonManagedReference
+    @JsonManagedReference("kuaforReference")
     @OneToMany(mappedBy = "randevular")
     private List<Randevu> randevular;
 
     @OneToMany(mappedBy = "kuafor")
-    @JsonIgnore
     private List<ShiftTablosu> ShiftTablolari;
 
 }
