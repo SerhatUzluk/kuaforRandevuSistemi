@@ -9,6 +9,8 @@ import lombok.Setter;
 
 import java.util.List;
 
+//Deneme
+
 @Getter
 @Setter
 @AllArgsConstructor
