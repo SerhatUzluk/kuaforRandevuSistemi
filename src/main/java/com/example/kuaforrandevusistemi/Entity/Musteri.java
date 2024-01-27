@@ -13,6 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table
+
+// hebelehubele
 public class Musteri {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
