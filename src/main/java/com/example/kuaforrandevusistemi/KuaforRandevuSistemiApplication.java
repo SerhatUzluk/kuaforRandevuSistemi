@@ -9,5 +9,6 @@ public class KuaforRandevuSistemiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KuaforRandevuSistemiApplication.class, args);
 	}
+	//isowen :)
 
 }
